@@ -23,7 +23,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Equipo -->
+  <!-- Equipo Central (tu sección actual) -->
   <section class="equipo-section">
     <div class="equipo-grid">
 
@@ -63,6 +63,141 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Equipo Ampliado - Nueva Sección -->
+  <section class="equipo-ampliado">
+    <div class="equipo-ampliado-container">
+      
+      <!-- Sección título -->
+      <div class="equipo-ampliado-intro">
+        <h2 class="equipo-ampliado-title">Equipo completo</h2>
+        <p class="equipo-ampliado-subtitle">
+          Conoce en detalle las trayectorias, formación y especializaciones 
+          de cada miembro de nuestro equipo central y colaboradores externos.
+        </p>
+      </div>
+
+      <!-- Equipo Central -->
+      <div class="equipo-ampliado-section">
+        <h3 class="section-label">Equipo Central</h3>
+        
+        <div class="equipo-ampliado-grid">
+          <!-- Diego -->
+          <div class="member-card">
+            <div class="member-header">
+              <h4 class="member-name">Diego Rojas Brotfeld</h4>
+              <p class="member-role">Inspector General · Co-fundador</p>
+              <p class="member-education">Magíster en Gestión de la Convivencia Escolar (máxima distinción)</p>
+            </div>
+            <div class="member-body">
+              <p class="member-description">
+                Profesor de Educación Física con más de 10 años de experiencia en gestión educativa. 
+                Especializado en resolución de conflictos y creación de ambientes propicios para el aprendizaje.
+              </p>
+              <ul class="member-highlights">
+                <li>Inspector General en Escuela Palestina, La Reina</li>
+                <li>Más de 10 años de experiencia como profesor jefe y docente de aula</li>
+                <li>Capacitado para trabajar en contextos de vulnerabilidad</li>
+              </ul>
+              <div class="member-tags">
+                <span>Convivencia Escolar</span>
+                <span>Gestión Directiva</span>
+                <span>Resolución de Conflictos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Karla -->
+          <div class="member-card">
+            <div class="member-header">
+              <h4 class="member-name">Karla Mascaró</h4>
+              <p class="member-role">Directora · Co-fundadora</p>
+              <p class="member-education">Psicóloga Educacional</p>
+            </div>
+            <div class="member-body">
+              <p class="member-description">
+                Especialista en inclusión escolar, Decreto 83 y neurodivergencia. 
+                Trabajo integral con familias de establecimientos educativos.
+              </p>
+              <ul class="member-highlights">
+                <li>Especialista en inclusión escolar y Decreto 83</li>
+                <li>Trabajo con familias en establecimientos educativos</li>
+                <li>Contención emocional y comprensión psicológica del diagnóstico</li>
+              </ul>
+              <div class="member-tags">
+                <span>Inclusión Escolar</span>
+                <span>Neurodivergencia</span>
+                <span>Decreto 83</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bárbara -->
+          <div class="member-card">
+            <div class="member-header">
+              <h4 class="member-name">Bárbara Rojas Millard</h4>
+              <p class="member-role">Directora · Psicóloga Educacional</p>
+              <p class="member-education">Psicóloga UDP (distinción máxima) · Diplomada en Psicología Educacional</p>
+            </div>
+            <div class="member-body">
+              <p class="member-description">
+                Especialista en mediación familia-escuela y procesos de acompañamiento a comunidades educativas. 
+                Amplia experiencia en intervención psicosocial y convivencia escolar.
+              </p>
+              <ul class="member-highlights">
+                <li>Mediación entre familia y escuela en situaciones complejas</li>
+                <li>Dupla psicosocial y equipos de convivencia escolar</li>
+                <li>Certificada en WISC-V y metodología A.M.A.R-E</li>
+              </ul>
+              <div class="member-tags">
+                <span>Mediación Familia-Escuela</span>
+                <span>Intervención Psicosocial</span>
+                <span>Convivencia Escolar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colaboradores Externos -->
+      <div class="equipo-ampliado-section">
+        <h3 class="section-label">Colaboradores Externos</h3>
+        
+        <div class="equipo-ampliado-grid">
+          <!-- Carla -->
+          <div class="member-card member-card-external">
+            <div class="member-header">
+              <h4 class="member-name">
+                Carla Grasso Godoy
+                <span class="external-badge">Consultora</span>
+              </h4>
+              <p class="member-role">Educadora Diferencial · Psicopedagoga</p>
+              <p class="member-education">Universidad Central | Universidad Mayor</p>
+            </div>
+            <div class="member-body">
+              <p class="member-description">
+                Doble especialización en educación diferencial y psicopedagogía. 
+                Más de 7 años de experiencia en programas de integración escolar (PIE) y atención a la diversidad.
+              </p>
+              <ul class="member-highlights">
+                <li>Codocencia y trabajo en aulas de recursos con NEE permanentes</li>
+                <li>Especialista en diversificación de enseñanza y trabajo colaborativo</li>
+                <li>Certificada en TEA, evaluación psicopedagógica (Evalúa 4.0) y lectura fácil</li>
+                <li>Atención psicopedagógica domiciliaria desde 2014</li>
+              </ul>
+              <div class="member-tags">
+                <span>Educación Diferencial</span>
+                <span>PIE</span>
+                <span>Psicopedagogía</span>
+                <span>Inclusión</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Manifiesto -->
   <section class="manifiesto-section">
     <div class="manifiesto-inner">
@@ -93,6 +228,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+  /* ========== Estilos originales de tu equipo ========== */
   .equipo-section {
     padding: 5rem 2rem;
     max-width: 1100px;
@@ -119,16 +255,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-weight: 500;
   }
   .director-nombre {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 300;
-    color: var(--green-dark);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
   }
   .director-linea {
-    width: 28px;
     height: 1px;
-    background: var(--gold);
-    opacity: 0.5;
+    background: var(--color-border, rgba(255,255,255,0.1));
+    margin: 0.5rem 0;
   }
   .director-datos {
     list-style: none;
@@ -136,49 +270,223 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
   }
   .director-datos li {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.6;
-    color: var(--muted);
   }
   .dato-label {
     font-size: 0.65rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0.5;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-  }
-  .manifiesto-section {
-    background: var(--green-dark);
-    padding: 5rem 2rem;
-  }
-  .manifiesto-inner {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .manifiesto-tag {
-    font-size: 0.7rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.5rem;
+    opacity: 0.5;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  /* ========== Nuevos estilos para equipo ampliado ========== */
+  .equipo-ampliado {
+    padding: 5rem 2rem;
+    background: var(--color-bg-alt, #fafafa);
+  }
+
+  .equipo-ampliado-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .equipo-ampliado-intro {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .equipo-ampliado-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .equipo-ampliado-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .equipo-ampliado-section {
+    margin-bottom: 4rem;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border, rgba(255,255,255,0.1));
+  }
+
+  .equipo-ampliado-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .member-card {
+    background: var(--color-bg, #ffffff);
+    border: 1px solid var(--color-border, rgba(255,255,255,0.1));
+    border-radius: 4px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .member-card-external {
+    border-color: var(--color-accent, #d4a574);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .member-card-external::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent, #d4a574), transparent);
+  }
+
+  .member-header {
+    border-bottom: 1px solid var(--color-border, rgba(255,255,255,0.1));
+    padding-bottom: 1rem;
+  }
+
+  .member-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .external-badge {
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-accent, #d4a574);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 3px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .member-role {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .member-education {
+    font-size: 0.85rem;
+    opacity: 0.5;
+    font-style: italic;
+  }
+
+  .member-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .member-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.8;
+  }
+
+  .member-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .member-highlights li {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    padding-left: 1.25rem;
+    position: relative;
+    opacity: 0.75;
+  }
+
+  .member-highlights li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    opacity: 0.5;
+  }
+
+  .member-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .member-tags span {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid var(--color-border, rgba(255,255,255,0.1));
+    border-radius: 3px;
+    opacity: 0.7;
     font-weight: 500;
   }
-  .manifiesto-texto {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.3rem, 3vw, 2rem);
-    font-style: italic;
-    font-weight: 300;
-    color: var(--cream);
-    line-height: 1.6;
-    border: none;
-    padding: 0;
-  }
+
+  /* ========== Responsive ========== */
   @media (max-width: 768px) {
-    .equipo-grid { grid-template-columns: 1fr; }
+    .equipo-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .equipo-ampliado {
+      padding: 3rem 1rem;
+    }
+
+    .equipo-ampliado-title {
+      font-size: 2rem;
+    }
+
+    .equipo-ampliado-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .member-card {
+      padding: 1.5rem;
+    }
+
+    .member-name {
+      font-size: 1.2rem;
+    }
   }
 </style>
