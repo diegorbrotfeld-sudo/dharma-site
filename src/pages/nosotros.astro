@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  current="nosotros"
+  title="Nosotros · Equipo especialista en Inclusión Escolar y Convivencia | Dharma Educa"
+  description="Conoce al equipo de Dharma Educa: especialistas en inclusión escolar, Decreto 83, protocolo DEC y convivencia escolar. Tres trayectorias. Un sistema integrado."
+>
+  <!-- Hero -->
+  <section class="hero" style="min-height:50vh;">
+    <div class="hero-bg"></div>
+    <div class="hero-content" style="grid-template-columns: 1fr;">
+      <div class="fade-up">
+        <div class="hero-tag">El equipo</div>
+        <h1>Tres trayectorias.<br><em>Un sistema.</em></h1>
+        <p class="hero-sub">
+          Dharma articula lo que otras consultoras ATE tratan por separado: 
+          diagnóstico clínico, gestión normativa en inclusión escolar y mediación con familias, 
+          como un solo sistema.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipo -->
+  <section class="equipo-section">
+    <div class="equipo-grid">
+
+      <div class="director-card">
+        <div class="director-rol">Director · Gestión y Normativa</div>
+        <h2 class="director-nombre">Diego Rojas</h2>
+        <div class="director-linea"></div>
+        <ul class="director-datos">
+          <li><span class="dato-label" style="display:block">Formación</span>Magíster en Convivencia Escolar</li>
+          <li><span class="dato-label" style="display:block">Experiencia</span>10 años en colegios con programas PIE y programas de integración. Inspectoría General.</li>
+          <li><span class="dato-label" style="display:block">Aporte clave</span>Gestión directiva, seguridad jurídica y aplicación de normativa, Ley de Inclusión y protocolos de convivencia escolar.</li>
+        </ul>
+      </div>
+
+      <div class="director-card">
+        <div class="director-rol">Directora · Inclusión y Neurodivergencia</div>
+        <h2 class="director-nombre">Karla Mascaró</h2>
+        <div class="director-linea"></div>
+        <ul class="director-datos">
+          <li><span class="dato-label">Formación</span><br/>Psicóloga Educacional</li>
+          <li><span class="dato-label">Experiencia<br/></span>Especialista en inclusión escolar, Decreto 83 y neurodivergencia. Trabajo con familias de establecimientos educativos.</li>
+          <li><span class="dato-label">Aporte clave<br/></span>Contención emocional, comprensión psicológica del diagnóstico y traducción a estrategias en el aula.</li>
+        </ul>
+      </div>
+
+      <div class="director-card">
+        <div class="director-rol">Directora · Mediación Familia–Escuela</div>
+        <h2 class="director-nombre">Bárbara Rojas</h2>
+        <div class="director-linea"></div>
+        <ul class="director-datos">
+          <li><span class="dato-label">Formación<br/></span>Psicóloga Educacional</li>
+          <li><span class="dato-label">Experiencia<br/></span>Acompañamiento a comunidades educativas y procesos de mediación con apoderados desafiantes.</li>
+          <li><span class="dato-label">Aporte clave<br/></span>Mediación entre familia y escuela, conducción de conversaciones difíciles y acuerdos sostenibles.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Manifiesto -->
+  <section class="manifiesto-section">
+    <div class="manifiesto-inner">
+      <div class="manifiesto-tag">Manifiesto</div>
+      <blockquote class="manifiesto-texto">
+        "Una escuela inclusiva no comienza con un diagnóstico: comienza con 
+        una comunidad que comprende por qué ese diagnóstico importa."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="hero" style="min-height:30vh;">
+    <div class="hero-bg"></div>
+    <div class="hero-content" style="grid-template-columns: 1fr;">
+      <div class="fade-up">
+        <p class="hero-sub" style="margin-bottom:2rem;">
+          Tres ejes. Un solo sistema de inclusión escolar.
+        </p>
+        <div class="hero-actions">
+          <a href="/diagnostico" class="btn-primary">Diagnóstico gratuito</a>
+          <a href="/contacto" class="btn-secondary">Contactar al equipo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .equipo-section {
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .director-card {
+    padding: 2rem 1.75rem;
+    border: 1px solid var(--color-border, rgba(255,255,255,0.1));
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .director-rol {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-weight: 500;
+  }
+  .director-nombre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--green-dark);
+  }
+  .director-linea {
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+  .director-datos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .director-datos li {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .dato-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .manifiesto-section {
+    background: var(--green-dark);
+    padding: 5rem 2rem;
+  }
+  .manifiesto-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .manifiesto-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  .manifiesto-texto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.6;
+    border: none;
+    padding: 0;
+  }
+  @media (max-width: 768px) {
+    .equipo-grid { grid-template-columns: 1fr; }
+  }
+</style>

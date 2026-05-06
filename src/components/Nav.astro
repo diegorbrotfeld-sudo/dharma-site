@@ -1,0 +1,24 @@
+---
+interface Props {
+  current?: 'home' | 'servicios' | 'nosotros' | 'diagnostico' | 'contacto' | 'blog';
+}
+const { current } = Astro.props;
+---
+
+<nav>
+  <a href="/" class="nav-logo" style="text-decoration:none;">
+    <img src="/logo.png" alt="Dharma Educa" style="height:40px; width:auto;">
+    <div>
+      <span class="nav-logo-text">Dharma</span>
+      <span class="nav-logo-sub">Educa</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="/servicios" class={current === 'servicios' ? 'active' : ''}>Servicios</a>
+    <a href="/nosotros"  class={current === 'nosotros'  ? 'active' : ''}>Nosotros</a>
+    <a href="/blog"      class={current === 'blog'      ? 'active' : ''}>Blog</a>
+    <a href="/diagnostico" class={current === 'diagnostico' ? 'active' : ''}>Diagnóstico</a>
+    <a href="/contacto"  class={current === 'contacto'  ? 'active' : ''}>Contacto</a>
+  </div>
+  <a href="/diagnostico" class="nav-cta">Autodiagnóstico gratuito</a>
+</nav>

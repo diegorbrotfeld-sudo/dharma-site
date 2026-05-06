@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  current="blog"
+  title="Blog · Inclusión Escolar, Decreto 83 y Convivencia | Dharma Educa"
+  description="Artículos especializados sobre inclusión escolar, protocolo DEC, Decreto 83, Ley de Inclusión y convivencia escolar en Chile. Recursos para directivos y equipos educativos."
+>
+
+  <section class="hero" style="min-height:40vh;">
+    <div class="hero-bg"></div>
+    <div class="hero-content" style="grid-template-columns:1fr;">
+      <div class="fade-up">
+        <div class="hero-tag">Recursos</div>
+        <h1>Lo que todo equipo directivo<br><em>debería saber.</em></h1>
+        <p class="hero-sub">Artículos sobre inclusión escolar, normativa vigente y convivencia. Sin tecnicismos innecesarios.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-grid">
+
+        <a href="/blog/que-es-la-inclusion-escolar" class="blog-card fade-up">
+          <div class="blog-tag">Inclusión Escolar</div>
+          <h2 class="blog-titulo">¿Qué es la inclusión escolar y por qué su colegio no puede ignorarla?</h2>
+          <p class="blog-excerpt">La inclusión escolar no es solo tener estudiantes con diagnóstico en el aula. Es un sistema normativo, pedagógico y cultural que exige respuesta institucional concreta.</p>
+          <div class="blog-meta">
+            <span>Dharma Educa</span>
+            <span>Mayo 2026</span>
+            <span class="blog-leer">Leer artículo →</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="blog-pronto fade-up">
+        <div class="pronto-tag">Próximamente</div>
+        <div class="pronto-grid">
+          <div class="pronto-item">¿Qué exige el Decreto 83 a su colegio?</div>
+          <div class="pronto-item">Protocolo DEC: cómo implementarlo paso a paso</div>
+          <div class="pronto-item">Ley de Inclusión Escolar: lo que todo director debe saber</div>
+          <div class="pronto-item">Cómo redactar un acta de convivencia que resista una denuncia</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <h2 class="fade-up">¿Prefiere una evaluación directa?</h2>
+    <p class="fade-up">El diagnóstico gratuito identifica en 4 preguntas el nivel de riesgo de su colegio.</p>
+    <a href="/diagnostico" class="btn-primary fade-up">Diagnóstico gratuito</a>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .blog-section { padding: 5rem 2rem; }
+  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 4rem; }
+
+  .blog-card {
+    display: flex; flex-direction: column; gap: 1rem;
+    padding: 2rem; border: 1px solid var(--color-border, rgba(0,0,0,0.1));
+    border-radius: 4px; text-decoration: none; color: inherit;
+    transition: border-color .2s, transform .2s;
+    border-top: 3px solid var(--gold);
+  }
+  .blog-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+
+  .blog-tag {
+    font-size: .65rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold); font-weight: 600;
+  }
+  .blog-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 400; line-height: 1.35;
+    color: var(--green-dark);
+  }
+  .blog-excerpt {
+    font-size: .85rem; line-height: 1.7; color: var(--muted);
+    font-weight: 300; flex: 1;
+  }
+  .blog-meta {
+    display: flex; gap: 1rem; align-items: center;
+    font-size: .7rem; opacity: .5; flex-wrap: wrap;
+  }
+  .blog-leer { color: var(--gold); opacity: 1; font-weight: 500; margin-left: auto; }
+
+  .blog-pronto { border-top: 1px solid rgba(0,0,0,0.08); padding-top: 3rem; }
+  .pronto-tag {
+    font-size: .65rem; letter-spacing: .1em; text-transform: uppercase;
+    opacity: .4; font-weight: 600; margin-bottom: 1.5rem;
+  }
+  .pronto-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .pronto-item {
+    padding: 1rem 1.25rem;
+    border: 1px dashed rgba(0,0,0,0.12);
+    border-radius: 4px;
+    font-size: .85rem; color: var(--muted); font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .blog-grid, .pronto-grid { grid-template-columns: 1fr; }
+  }
+</style>

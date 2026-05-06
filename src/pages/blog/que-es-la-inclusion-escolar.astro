@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  current="blog"
+  title="¿Qué es la inclusión escolar? | Dharma Educa"
+  description="La inclusión escolar en Chile va más allá de tener estudiantes con diagnóstico en el aula. Conoce qué exige la ley, el Decreto 83 y qué debe hacer su colegio para cumplir."
+>
+
+  <section class="hero" style="min-height:35vh;">
+    <div class="hero-bg"></div>
+    <div class="hero-content" style="grid-template-columns:1fr;">
+      <div class="fade-up">
+        <div class="hero-tag">Inclusión Escolar · Mayo 2026</div>
+        <h1>¿Qué es la inclusión escolar<br><em>y por qué su colegio no puede ignorarla?</em></h1>
+      </div>
+    </div>
+  </section>
+
+  <article class="articulo-section">
+    <div class="articulo-container">
+
+      <p class="articulo-bajada">
+        La inclusión escolar no es solo tener estudiantes con diagnóstico en el aula. Es un sistema normativo, pedagógico y cultural que exige respuesta institucional concreta — y que tiene consecuencias legales cuando no se aplica correctamente.
+      </p>
+
+      <h2>La definición que la ley establece</h2>
+      <p>
+        En Chile, la <strong>Ley 20.845 de Inclusión Escolar</strong> (2015) establece que los establecimientos educacionales no pueden seleccionar, discriminar ni excluir estudiantes por razones económicas, sociales, culturales, religiosas o de cualquier otra índole. Pero la inclusión escolar va más allá de la matrícula: implica garantizar que todos los estudiantes — independientemente de sus características — participen, aprendan y progresen dentro de la comunidad educativa.
+      </p>
+
+      <h2>¿Qué exige el Decreto 83?</h2>
+      <p>
+        El <strong>Decreto 83 de 2015</strong> es el marco técnico-pedagógico de la inclusión en Chile. Establece los criterios y orientaciones para la diversificación de la enseñanza, aplicando los principios del <strong>Diseño Universal de Aprendizaje (DUA)</strong>. En términos prácticos, exige que los colegios adapten sus metodologías, materiales y formas de evaluación para dar respuesta a la diversidad de sus estudiantes — no solo a quienes tienen un diagnóstico formal.
+      </p>
+      <p>
+        Esto significa que un colegio que solo actúa cuando hay un diagnóstico adjunto ya está incumpliendo el espíritu del Decreto 83. La diversificación de la enseñanza es una obligación institucional, no una decisión pedagógica opcional.
+      </p>
+
+      <h2>Inclusión escolar y el Programa de Integración Escolar (PIE)</h2>
+      <p>
+        El <strong>PIE (Programa de Integración Escolar)</strong> es el mecanismo concreto a través del cual muchos colegios implementan la inclusión. Financia profesionales de apoyo, define horas de trabajo colaborativo entre docentes y especialistas, y establece los Planes de Adecuación Curricular Individual (PACI) para estudiantes con Necesidades Educativas Especiales (NEE).
+      </p>
+      <p>
+        Sin embargo, uno de los errores más frecuentes que observamos en los colegios es <strong>confundir inclusión escolar con gestión del PIE</strong>. El PIE es solo una parte del sistema. La inclusión implica también la convivencia escolar, la formación de todos los docentes, los protocolos de crisis y la relación con las familias.
+      </p>
+
+      <h2>¿Qué pasa cuando la inclusión no se implementa correctamente?</h2>
+      <p>
+        Las consecuencias de una inclusión mal gestionada son concretas y graduales:
+      </p>
+      <ul>
+        <li><strong>Denuncias ante la Superintendencia de Educación</strong> por discriminación o falta de apoyo a estudiantes con NEE.</li>
+        <li><strong>Conflictos con apoderados</strong> que escalan porque no hubo protocolo ni registro adecuado.</li>
+        <li><strong>Crisis conductuales</strong> que el equipo no sabe manejar porque no existe un protocolo DEC instalado.</li>
+        <li><strong>Observaciones en procesos de fiscalización</strong> por reglamentos internos desactualizados o planes de convivencia que no reflejan la realidad del colegio.</li>
+      </ul>
+
+      <h2>La inclusión escolar como sistema, no como actitud</h2>
+      <p>
+        En Dharma Educa entendemos la inclusión escolar como un sistema que debe instalarse antes de que llegue la crisis. Eso implica tres ejes simultáneos:
+      </p>
+      <ul>
+        <li><strong>Neurodivergencia y diagnóstico:</strong> que el equipo sepa qué significa cada diagnóstico y cómo se traduce en el aula.</li>
+        <li><strong>Normativa y protocolos:</strong> que el colegio tenga documentación actualizada, coherente con la ley y a prueba de cuestionamiento.</li>
+        <li><strong>Gestión y convivencia:</strong> que directivos y docentes tengan herramientas concretas para conducir conversaciones difíciles, manejar crisis y sostener acuerdos con las familias.</li>
+      </ul>
+      <p>
+        Un colegio inclusivo no es el que tiene más estudiantes con diagnóstico. Es el que tiene un sistema que funciona cuando la situación se complica.
+      </p>
+
+      <div class="articulo-cta">
+        <div class="articulo-cta-texto">
+          <h3>¿Cómo está su colegio en inclusión escolar?</h3>
+          <p>Haga el diagnóstico gratuito — 4 preguntas, resultado inmediato, sin compromiso.</p>
+        </div>
+        <a href="/diagnostico" class="btn-primary">Diagnóstico gratuito →</a>
+      </div>
+
+      <div class="articulo-autor">
+        <div class="autor-linea"></div>
+        <p>Escrito por el equipo <strong>Dharma Educa</strong> · Consultora especializada en inclusión escolar, convivencia y normativa educativa en Chile.</p>
+        <a href="/blog" class="volver-blog">← Volver al blog</a>
+      </div>
+
+    </div>
+  </article>
+
+</BaseLayout>
+
+<style>
+  .articulo-section { padding: 4rem 2rem 6rem; }
+  .articulo-container {
+    max-width: 760px; margin: 0 auto;
+    font-size: 1rem; line-height: 1.85;
+    color: var(--text);
+  }
+  .articulo-bajada {
+    font-size: 1.15rem; line-height: 1.75;
+    color: var(--muted); font-weight: 300;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.5rem; margin-bottom: 3rem;
+    font-style: italic;
+  }
+  .articulo-container h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 600;
+    color: var(--green-dark); margin: 2.5rem 0 1rem;
+  }
+  .articulo-container p { margin-bottom: 1.25rem; font-weight: 300; }
+  .articulo-container ul {
+    margin: 1rem 0 1.5rem 1.25rem;
+    display: flex; flex-direction: column; gap: .5rem;
+  }
+  .articulo-container ul li { font-weight: 300; }
+  .articulo-container strong { font-weight: 600; color: var(--green-dark); }
+
+  .articulo-cta {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 2rem; flex-wrap: wrap;
+    background: var(--green-dark); color: var(--cream);
+    padding: 2.5rem; border-radius: 4px; margin: 3rem 0;
+  }
+  .articulo-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 300; margin-bottom: .5rem;
+    color: var(--cream);
+  }
+  .articulo-cta p { font-size: .9rem; opacity: .6; margin: 0; }
+
+  .articulo-autor {
+    margin-top: 3rem; padding-top: 2rem;
+  }
+  .autor-linea { width: 40px; height: 1px; background: var(--gold); margin-bottom: 1rem; opacity: .5; }
+  .articulo-autor p { font-size: .85rem; color: var(--muted); }
+  .volver-blog {
+    display: inline-block; margin-top: 1rem;
+    font-size: .8rem; color: var(--gold);
+    text-decoration: none; letter-spacing: .05em;
+  }
+  .volver-blog:hover { opacity: .7; }
+</style>

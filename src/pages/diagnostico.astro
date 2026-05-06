@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Autodiagnostico from '../components/Autodiagnostico.astro';
+---
+
+<BaseLayout
+  current="diagnostico"
+  title="Diagnóstico gratuito · Dharma Educa"
+  description="Responda 4 preguntas y reciba un informe preliminar con el nivel de riesgo de su colegio y las acciones prioritarias a tomar."
+>
+  <!-- Espaciador para compensar el nav fijo -->
+  <div style="height:68px; background:var(--green-dark);"></div>
+
+  <Autodiagnostico
+    title="Diagnóstico de riesgo institucional"
+    subtitle="4 preguntas. Un informe honesto. Sin compromiso."
+  />
+</BaseLayout>

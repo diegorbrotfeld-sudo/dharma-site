@@ -1,0 +1,304 @@
+---
+// Autodiagnóstico Dharma — versión 2.0
+// Lógica: detecta número de frentes y magnitud → recomienda pack
+---
+
+<section class="autodiag" id="autodiagnostico">
+  <div class="container" style="text-align:center;">
+    <div class="section-tag" style="color:var(--gold);">Diagnóstico gratuito</div>
+    <h2>¿Cuántos frentes tiene abiertos su colegio?</h2>
+    <p class="lead" style="margin:0 auto 44px;">
+      8 preguntas. Un resultado concreto. El pack exacto que su colegio necesita hoy.
+    </p>
+
+    <div class="form-card" id="formCard">
+      <!-- DATOS DEL COLEGIO -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Nombre del colegio</label>
+          <input type="text" id="nombre" placeholder="Ej: Colegio San Martín" />
+        </div>
+        <div class="form-group">
+          <label for="matricula">Matrícula aproximada</label>
+          <select id="matricula">
+            <option value="">Seleccionar…</option>
+            <option value="pequeno">Hasta 300 alumnos</option>
+            <option value="mediano">301 – 800 alumnos</option>
+            <option value="grande">801+ alumnos</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="questions">
+
+        <!-- FRENTE 1: CRISIS Y DESREGULACIÓN -->
+        <div class="frente-titulo">Frente 1 · Crisis y desregulación emocional</div>
+
+        <div class="q-item">
+          <div class="q-text">1. ¿Con qué frecuencia ocurren crisis de desregulación emocional en su colegio?</div>
+          <div class="q-options">
+            <button class="q-opt" data-q="1" data-val="1" data-frente="crisis">Raramente o nunca</button>
+            <button class="q-opt" data-q="1" data-val="2" data-frente="crisis">1 o 2 veces al mes</button>
+            <button class="q-opt" data-q="1" data-val="3" data-frente="crisis">Semanalmente o más</button>
+          </div>
+        </div>
+
+        <div class="q-item">
+          <div class="q-text">2. ¿Su equipo tiene un protocolo escrito y operativo para manejar estas crisis?</div>
+          <div class="q-options">
+            <button class="q-opt" data-q="2" data-val="3" data-frente="crisis">No existe ninguno</button>
+            <button class="q-opt" data-q="2" data-val="2" data-frente="crisis">Existe pero no se aplica</button>
+            <button class="q-opt" data-q="2" data-val="1" data-frente="crisis">Sí, está instalado y se usa</button>
+          </div>
+        </div>
+
+        <!-- FRENTE 2: NORMATIVA -->
+        <div class="frente-titulo">Frente 2 · Normativa y protocolos</div>
+
+        <div class="q-item">
+          <div class="q-text">3. ¿Sus reglamentos y protocolos fueron revisados según la normativa vigente en los últimos 12 meses?</div>
+          <div class="q-options">
+            <button class="q-opt" data-q="3" data-val="3" data-frente="normativa">No, están desactualizados</button>
+            <button class="q-opt" data-q="3" data-val="2" data-frente="normativa">Parcialmente revisados</button>
+            <button class="q-opt" data-q="3" data-val="1" data-frente="normativa">Sí, actualizados</button>
+          </div>
+        </div>
+
+        <div class="q-item">
+          <div class="q-text">4. ¿Ha recibido su colegio alguna observación, denuncia o fiscalización en los últimos 2 años?</div>
+          <div class="q-options">
+            <button class="q-opt" data-q="4" data-val="3" data-frente="normativa">Sí, más de una vez</button>
+            <button class="q-opt" data-q="4" data-val="2" data-frente="normativa">Sí, una vez</button>
+            <button class="q-opt" data-q="4" data-val="1" data-frente="normativa">No, nunca</button>
+          </div>
+        </div>
+
+        <!-- FRENTE 3: APODERADOS -->
+        <div class="frente-titulo">Frente 3 · Familias y apoderados</div>
+
+        <div class="q-item">
+          <div class="q-text">5. ¿Con qué frecuencia enfrenta su equipo situaciones tensas o conflictivas con apoderados?</div>
+          <div class="q-options">
+            <button class="q-opt" data-q="5" data-val="1" data-frente="apoderados">Casi nunca</button>
+            <button class="q-opt" data-q="5" data-val="2" data-frente="apoderados">Ocasionalmente</button>
+            <button class="q-opt" data-q="5" data-val="3" data-frente="apoderados">Frecuentemente</button>
+          </div>
+        </div>
+
+        <div class="q-item">
+          <div class="q-text">6. ¿Su equipo sabe cómo conducir una entrevista difícil con un apoderado desafiante sin que escale?</div>
+          <div class="q-options">
+            <button class="q-opt" data-q="6" data-val="3" data-frente="apoderados">No, improvisamos</button>
+            <button class="q-opt" data-q="6" data-val="2" data-frente="apoderados">Algunos saben, otros no</button>
+            <button class="q-opt" data-q="6" data-val="1" data-frente="apoderados">Sí, tenemos protocolo</button>
+          </div>
+        </div>
+
+        <!-- FRENTE 4: PLANIFICACIÓN -->
+        <div class="frente-titulo">Frente 4 · Planificación institucional</div>
+
+        <div class="q-item">
+          <div class="q-text">7. ¿Su plan de convivencia escolar refleja la realidad actual del colegio y se aplica en el día a día?</div>
+          <div class="q-options">
+            <button class="q-opt" data-q="7" data-val="3" data-frente="planificacion">No, está desconectado de la realidad</button>
+            <button class="q-opt" data-q="7" data-val="2" data-frente="planificacion">Parcialmente</button>
+            <button class="q-opt" data-q="7" data-val="1" data-frente="planificacion">Sí, está alineado</button>
+          </div>
+        </div>
+
+        <div class="q-item">
+          <div class="q-text">8. ¿Cómo describiría la visión de su establecimiento respecto a la inclusión escolar?</div>
+          <div class="q-options">
+            <button class="q-opt" data-q="8" data-val="1" data-frente="planificacion">Queremos resolver un problema puntual</button>
+            <button class="q-opt" data-q="8" data-val="2" data-frente="planificacion">Queremos ordenar varios frentes</button>
+            <button class="q-opt" data-q="8" data-val="3" data-frente="planificacion">Queremos transformación institucional</button>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="form-submit" id="submitDiag">Ver el diagnóstico de mi colegio →</button>
+    </div>
+
+    <!-- PANEL DE RESULTADO -->
+    <div class="result-panel" id="resultPanel">
+      <div class="result-semaforo" id="resultEmoji"></div>
+      <div class="result-title" id="resultTitle"></div>
+      <div class="result-text" id="resultText"></div>
+
+      <!-- FRENTES DETECTADOS -->
+      <div class="result-frentes" id="resultFrentes"></div>
+
+      <!-- PACK RECOMENDADO -->
+      <div class="result-pack" id="resultPack"></div>
+
+      <!-- PACK SUPERIOR -->
+      <div class="result-upgrade" id="resultUpgrade"></div>
+
+      <div class="result-actions">
+        <a href="/contacto" class="btn-primary" id="resultCTA">Solicitar propuesta →</a>
+        <button class="btn-secondary" id="resetDiag" style="cursor:pointer;">Repetir diagnóstico</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const answers = {};
+
+  document.querySelectorAll('.q-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const q = btn.dataset.q;
+      answers[q] = { val: parseInt(btn.dataset.val), frente: btn.dataset.frente };
+      btn.closest('.q-options').querySelectorAll('.q-opt').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+    });
+  });
+
+  document.getElementById('submitDiag').addEventListener('click', () => {
+    const nombre = document.getElementById('nombre').value;
+    const matricula = document.getElementById('matricula').value;
+    if (!nombre || !matricula || Object.keys(answers).length < 8) {
+      alert('Por favor complete todos los campos y preguntas.');
+      return;
+    }
+
+    // Calcular puntaje por frente
+    const frentes = { crisis: 0, normativa: 0, apoderados: 0, planificacion: 0 };
+    Object.values(answers).forEach(a => { frentes[a.frente] += a.val; });
+
+    // Frentes críticos (puntaje >= 4 sobre 6)
+    const frentesAltos = Object.entries(frentes).filter(([,v]) => v >= 4);
+    const totalScore = Object.values(frentes).reduce((a,b) => a+b, 0);
+    const visionInstitucional = answers['8']?.val === 3;
+
+    // Nombres de frentes
+    const nombreFrente = {
+      crisis: 'Crisis y desregulación emocional',
+      normativa: 'Normativa y protocolos',
+      apoderados: 'Familias y apoderados',
+      planificacion: 'Planificación institucional'
+    };
+
+    // Determinar pack
+    let pack, upgrade, emoji, titulo, texto;
+
+    if (visionInstitucional || totalScore >= 18 || frentesAltos.length >= 3) {
+      pack = 'Pack Transformación';
+      upgrade = null;
+      emoji = '🔴';
+      titulo = `${nombre} requiere una transformación institucional completa`;
+      texto = 'Su colegio presenta múltiples frentes abiertos con alta magnitud. El Pack Transformación instala el sistema Dharma completo — incluyendo 3 meses de acompañamiento — para garantizar que los cambios sean sostenibles.';
+    } else if (totalScore >= 12 || frentesAltos.length >= 2) {
+      pack = 'Pack Seguridad Total';
+      upgrade = 'Pack Transformación';
+      emoji = '🟡';
+      titulo = `${nombre} necesita control total de su gestión inclusiva`;
+      texto = 'Su colegio tiene varios frentes que requieren atención simultánea. El Pack Seguridad Total cubre diagnóstico, sistema DEC y blindaje normativo — los tres ejes que más exponen a un colegio ante una fiscalización o denuncia.';
+    } else {
+      pack = 'Pack Esencial';
+      upgrade = 'Pack Seguridad Total';
+      emoji = '🟢';
+      titulo = `${nombre} tiene un frente prioritario que resolver`;
+      texto = 'Su colegio tiene una situación manejable con intervención focalizada. El Pack Esencial instala el diagnóstico de riesgo y el Sistema DEC — la base que todo establecimiento necesita antes de que escale.';
+    }
+
+    // Construir HTML de frentes
+    const frentesHTML = frentesAltos.length > 0
+      ? `<div class="frentes-titulo">Frentes detectados como críticos:</div>` +
+        frentesAltos.map(([f]) => `<div class="frente-badge">⚠ ${nombreFrente[f]}</div>`).join('')
+      : `<div class="frentes-titulo">No se detectaron frentes críticos urgentes.</div>`;
+
+    const packLinks = {
+      'Pack Esencial': '/servicios',
+      'Pack Seguridad Total': '/servicios',
+      'Pack Transformación': '/servicios'
+    };
+
+    const packHTML = `
+      <div class="result-pack-label">Pack recomendado</div>
+      <div class="result-pack-name">${pack}</div>
+      <a href="${packLinks[pack]}" class="btn-primary" style="display:inline-block;margin-top:.75rem;">Ver detalle del pack →</a>
+    `;
+
+    const upgradeHTML = upgrade ? `
+      <div class="result-upgrade-text">
+        ¿Quiere mayor protección? El <strong>${upgrade}</strong> cubre además los frentes adicionales detectados en su colegio.
+        <a href="/contacto"> Conversemos →</a>
+      </div>
+    ` : '';
+
+    // Mostrar resultado
+    document.getElementById('formCard').style.display = 'none';
+    const rp = document.getElementById('resultPanel');
+    rp.classList.add('show');
+    document.getElementById('resultEmoji').textContent = emoji;
+    document.getElementById('resultTitle').textContent = titulo;
+    document.getElementById('resultText').textContent = texto;
+    document.getElementById('resultFrentes').innerHTML = frentesHTML;
+    document.getElementById('resultPack').innerHTML = packHTML;
+    document.getElementById('resultUpgrade').innerHTML = upgradeHTML;
+    rp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  document.getElementById('resetDiag').addEventListener('click', () => {
+    document.getElementById('formCard').style.display = 'block';
+    document.getElementById('resultPanel').classList.remove('show');
+    document.querySelectorAll('.q-opt').forEach(b => b.classList.remove('selected'));
+    Object.keys(answers).forEach(k => delete answers[k]);
+    document.getElementById('nombre').value = '';
+    document.getElementById('matricula').value = '';
+  });
+})();
+</script>
+
+<style>
+  .frente-titulo {
+    font-size: .65rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold); opacity: .8; font-weight: 600;
+    margin: 2rem 0 .5rem; text-align: left;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+  .result-frentes {
+    display: flex; flex-wrap: wrap; gap: .5rem;
+    justify-content: center; margin: 1.5rem 0;
+  }
+  .frentes-titulo {
+    width: 100%; font-size: .75rem; opacity: .5; margin-bottom: .5rem;
+  }
+  .frente-badge {
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold); font-size: .75rem;
+    padding: .4rem .9rem; border-radius: 20px;
+  }
+  .result-pack {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 4px; padding: 1.5rem;
+    margin: 1.5rem 0; text-align: left;
+  }
+  .result-pack-label {
+    font-size: .65rem; letter-spacing: .1em; text-transform: uppercase;
+    opacity: .5; margin-bottom: .5rem;
+  }
+  .result-pack-name {
+    font-size: 1.3rem; font-weight: 500;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--cream); margin-bottom: .5rem;
+  }
+  .result-upgrade {
+    margin: 1rem 0;
+  }
+  .result-upgrade-text {
+    font-size: .85rem; opacity: .6; line-height: 1.6;
+    border-left: 2px solid rgba(201,168,76,0.3);
+    padding-left: 1rem; text-align: left;
+  }
+  .result-upgrade-text a {
+    color: var(--gold); text-decoration: none;
+  }
+  .result-upgrade-text strong { color: var(--cream); }
+</style>

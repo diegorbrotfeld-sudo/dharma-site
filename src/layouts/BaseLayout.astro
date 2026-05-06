@@ -1,0 +1,104 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  /** <title> de la página */
+  title: string;
+  /** Meta description para SEO */
+  description: string;
+  /** Página actual, para marcar el ítem activo en el nav */
+  current?: 'home' | 'servicios' | 'nosotros' | 'diagnostico' | 'contacto';
+  /** URL canónica (opcional) */
+  canonical?: string;
+  /** Imagen para Open Graph (opcional) */
+  ogImage?: string;
+}
+
+const {
+  title,
+  description,
+  current = 'home',
+  canonical,
+  ogImage = '/og-image.png',
+} = Astro.props;
+
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+
+  <!-- SEO -->
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <Nav current={current} />
+
+  <slot />
+
+  <Footer />
+
+  <!-- Botón WhatsApp -->
+  <a 
+    href="https://wa.me/56912345678?text=Hola,%20quiero%20el%20diagn%C3%B3stico%20gratuito"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+  >
+    <svg viewBox="0 0 32 32">
+      <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.265 1.41 1.452-5.388-0.348-0.562c-1.334-2.157-2.036-4.651-2.036-7.231 0-7.476 6.091-13.567 13.567-13.567s13.567 6.091 13.567 13.567c0 7.476-6.091 13.567-13.567 13.567zM21.66 18.417c-0.214-0.107-1.261-0.622-1.456-0.693s-0.337-0.107-0.479 0.107c-0.142 0.214-0.551 0.693-0.676 0.835s-0.248 0.161-0.462 0.054c-0.214-0.107-0.902-0.333-1.718-1.060-0.635-0.566-1.064-1.264-1.189-1.478s-0.013-0.329 0.094-0.436c0.096-0.096 0.214-0.248 0.321-0.372s0.142-0.214 0.214-0.357c0.071-0.142 0.036-0.267-0.018-0.372s-0.479-1.154-0.656-1.578c-0.172-0.413-0.347-0.357-0.479-0.364-0.124-0.007-0.267-0.009-0.409-0.009s-0.372 0.054-0.567 0.267c-0.195 0.214-0.744 0.728-0.744 1.775s0.762 2.060 0.868 2.202c0.107 0.142 1.502 2.293 3.637 3.215 0.508 0.219 0.905 0.349 1.214 0.447 0.511 0.161 0.976 0.139 1.344 0.084 0.41-0.061 1.261-0.516 1.439-1.013s0.178-0.925 0.125-1.013c-0.054-0.089-0.196-0.142-0.41-0.248z"/>
+    </svg>
+  </a>
+
+  <!-- Observer global para animaciones fade-up -->
+  <script is:inline>
+    (function () {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08 }
+      );
+      document.querySelectorAll('.fade-up').forEach((el) => io.observe(el));
+    })();
+  </script>
+</body>
+</html>

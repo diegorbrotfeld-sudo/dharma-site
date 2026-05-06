@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MandalaHero from '../components/MandalaHero.astro';
+import Autodiagnostico from '../components/Autodiagnostico.astro';
+---
+
+<BaseLayout
+  current="home"
+  title="Dharma Educa · Consultora en Inclusión Escolar y Convivencia | Chile"
+  description="Consultora especializada en inclusión escolar, protocolo DEC, Decreto 83 y convivencia escolar. Instalamos los sistemas antes de que llegue la crisis. Colegios de todo Chile."
+>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <svg class="hero-mandala" viewBox="0 0 500 500" fill="none" aria-hidden="true">
+      <circle cx="250" cy="250" r="240" stroke="white" stroke-opacity="0.04"/>
+      <circle cx="250" cy="250" r="180" stroke="white" stroke-opacity="0.04"/>
+      <circle cx="250" cy="250" r="120" stroke="white" stroke-opacity="0.04"/>
+      <circle cx="250" cy="250" r="60"  stroke="white" stroke-opacity="0.04"/>
+      <line x1="250" y1="10"  x2="250" y2="490" stroke="white" stroke-opacity="0.04"/>
+      <line x1="10"  y1="250" x2="490" y2="250" stroke="white" stroke-opacity="0.04"/>
+      <line x1="80"  y1="80"  x2="420" y2="420" stroke="white" stroke-opacity="0.04"/>
+      <line x1="420" y1="80"  x2="80"  y2="420" stroke="white" stroke-opacity="0.04"/>
+      <circle cx="250" cy="10"  r="5" fill="white" fill-opacity="0.15"/>
+      <circle cx="490" cy="250" r="5" fill="white" fill-opacity="0.15"/>
+      <circle cx="250" cy="490" r="5" fill="white" fill-opacity="0.15"/>
+      <circle cx="10"  cy="250" r="5" fill="white" fill-opacity="0.15"/>
+    </svg>
+    <div class="hero-content">
+      <div class="fade-up">
+        <h1>El colegio que trabaja con Dharma<br><em>no improvisa cuando llega la crisis.</em></h1>
+        <p class="hero-sub">
+          Dharma instala los protocolos, la formación y la documentación antes de que los necesite. Porque los establecimientos educativos que trabajan con nosotros no improvisan cuando llega la crisis.
+        </p>
+        <div class="hero-actions">
+          <a href="#autodiagnostico" class="btn-primary">Diagnóstico gratuito</a>
+          <a href="/servicios" class="btn-secondary">Ver el sistema →</a>
+        </div>
+      </div>
+      <div class="hero-visual fade-up">
+        <MandalaHero />
+        <div class="hero-stats">
+          <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Ejes integrados en un solo sistema</div></div>
+          <div class="stat-card"><div class="stat-num">6</div><div class="stat-label">Servicios especializados</div></div>
+          <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Años de experiencia en terreno</div></div>
+          <div class="stat-card"><div class="stat-num">PIE</div><div class="stat-label">Compatible con fondos SEP y PIE</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="problema" id="problema">
+    <div class="container">
+      <div class="section-tag fade-up">El problema</div>
+      <h2 class="fade-up">Lo que ocurre cuando no hay un sistema instalado</h2>
+      <p class="lead fade-up">
+        Cada semana, colegios de todo Chile enfrentan situaciones que escalan por falta de protocolo de inclusión escolar y convivencia.
+      </p>
+      <div class="problema-grid">
+        <div class="problema-card fade-up">
+          <div class="icon">⚡</div>
+          <h3>Crisis sin protocolo</h3>
+          <p>Un estudiante se desregula y el equipo improvisa. Sin flujograma DEC, cada adulto reacciona distinto.</p>
+        </div>
+        <div class="problema-card fade-up">
+          <div class="icon">📋</div>
+          <h3>Normativa mal aplicada</h3>
+          <p>El Decreto 83 y la Ley de Inclusión Escolar se aplican de memoria o de forma inconsistente. Una acta mal redactada puede convertirse en denuncia.</p>
+        </div>
+        <div class="problema-card fade-up">
+          <div class="icon">👨‍👩‍👧</div>
+          <h3>Apoderados desafiantes</h3>
+          <p>No son las crisis extremas las que terminan en demandas. Es la conversación mal conducida con el apoderado equivocado.</p>
+        </div>
+      </div>
+      <div class="inline-cta fade-up">
+        <a href="/servicios" class="btn-secondary">Conocer el sistema Dharma →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SISTEMA -->
+  <section id="sistema">
+    <div class="container">
+      <div class="section-tag fade-up">El sistema Dharma</div>
+      <h2 class="fade-up">Tres ejes. Un solo sistema.</h2>
+      <p class="lead fade-up">
+        Lo que otras consultoras ATE tratan por separado, Dharma lo articula en un sistema integrado, aplicado y medible.
+      </p>
+      <div class="sistema-grid">
+        <div class="sistema-card c1 fade-up">
+          <div class="num">1</div>
+          <div class="card-line"></div>
+          <h3>Neurodivergencia</h3>
+          <p>Capacitación y análisis técnico sobre neurodivergencia aplicada al aula. Decreto 83 y diversificación de la enseñanza.</p>
+        </div>
+        <div class="sistema-card c2 fade-up">
+          <div class="num">2</div>
+          <div class="card-line"></div>
+          <h3>Normativa y Protocolos</h3>
+          <p>Interpretación y aplicación rigurosa del marco normativo vigente: Ley de Inclusión Escolar, Decreto 83 y reglamentos de convivencia.</p>
+        </div>
+        <div class="sistema-card c3 fade-up">
+          <div class="num">3</div>
+          <div class="card-line"></div>
+          <h3>Gestión y Convivencia</h3>
+          <p>Acompañamiento directivo para que los planes de convivencia y el PME funcionen en la práctica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTODIAGNÓSTICO -->
+  <Autodiagnostico />
+
+  <!-- EQUIPO PREVIEW -->
+  <section class="equipo" id="equipo">
+    <div class="container">
+      <div class="section-tag fade-up">El equipo</div>
+      <h2 class="fade-up">Tres trayectorias. Un sistema.</h2>
+      <p class="lead fade-up">
+        Dharma articula gestión normativa, comprensión psicológica del estudiante y mediación con familias.
+      </p>
+      <div class="team-grid">
+        <div class="team-card tc1 fade-up">
+          <div class="team-name">Diego Rojas</div>
+          <div class="team-role">Director · Gestión y Normativa</div>
+          <div class="team-line"></div>
+          <div class="team-detail">Magíster en Convivencia Escolar. 10 años en colegios con programas de integración PIE. Gestión directiva, seguridad jurídica y aplicación de normativa.</div>
+        </div>
+        <div class="team-card tc2 fade-up">
+          <div class="team-name">Karla Mascaró</div>
+          <div class="team-role">Directora · Inclusión y Neurodivergencia</div>
+          <div class="team-line"></div>
+          <div class="team-detail">Psicóloga Educacional. Especialista en inclusión escolar, neurodivergencia y Decreto 83. Contención emocional y estrategias en el aula.</div>
+        </div>
+        <div class="team-card tc3 fade-up">
+          <div class="team-name">Bárbara Rojas</div>
+          <div class="team-role">Directora · Mediación Familia–Escuela</div>
+          <div class="team-line"></div>
+          <div class="team-detail">Psicóloga Educacional. Acompañamiento a comunidades educativas y mediación con apoderados desafiantes. Conducción de conversaciones difíciles.</div>
+        </div>
+      </div>
+      <div class="inline-cta fade-up">
+        <a href="/nosotros" class="btn-secondary">Conocer al equipo completo →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <h2 class="fade-up">¿Listo para dejar de improvisar?</h2>
+    <p class="fade-up">
+      Haga el diagnóstico gratuito hoy. Su equipo puede tener el sistema instalado antes de que el próximo protocolo mal aplicado se convierta en una denuncia.
+    </p>
+    <a href="#autodiagnostico" class="btn-primary fade-up">Diagnóstico gratuito</a>
+  </section>
+
+</BaseLayout><style>
+  .team-card.tc3 { background: var(--green-light, #3D6B4A); }
+  .team-grid { grid-template-columns: repeat(3, 1fr) !important; }
+</style>
