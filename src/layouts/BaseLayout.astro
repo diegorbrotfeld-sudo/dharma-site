@@ -25,6 +25,7 @@ const {
 } = Astro.props;
 
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
+const GA_MEASUREMENT_ID = 'G-N9PW36XVGG';
 ---
 
 <!DOCTYPE html>
@@ -63,6 +64,15 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).toStri
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   />
+
+  <!-- Google Analytics -->
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+  <script define:vars={{ GA_MEASUREMENT_ID }}>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', GA_MEASUREMENT_ID);
+  </script>
 </head>
 <body>
   <Nav current={current} />
@@ -73,7 +83,7 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).toStri
 
   <!-- Botón WhatsApp -->
   <a 
-    href="https://wa.me/56912345678?text=Hola,%20quiero%20el%20diagn%C3%B3stico%20gratuito"
+    href="https://wa.me/56957643014?text=Hola,%20quiero%20el%20diagn%C3%B3stico%20gratuito"
     target="_blank"
     rel="noopener noreferrer"
     class="whatsapp-float"

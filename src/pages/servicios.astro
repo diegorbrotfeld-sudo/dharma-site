@@ -13,7 +13,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="hero-content" style="grid-template-columns:1fr;">
       <div class="fade-up">
         <h1>De la crisis a la<br><em>gestión segura en inclusión.</em></h1>
-        <p class="hero-sub">Seis servicios articulados en inclusión escolar, normativa y convivencia. Tres packs comerciales. Precios según el tipo de establecimiento.</p>
+        <p class="hero-sub">Seis servicios articulados en inclusión escolar, normativa y convivencia. Tres packs comerciales. Precios según matrícula del establecimiento.</p>
       </div>
     </div>
   </section>
@@ -22,6 +22,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="section-tag fade-up">Portafolio 2026</div>
       <h2 class="fade-up">Los 6 servicios del sistema Dharma</h2>
+      <p class="srv-intro fade-up">Precios por servicio individual. Para mayor eficiencia, vea los packs comerciales más abajo.</p>
 
       <div class="servicio-card fade-up">
         <div class="srv-header">
@@ -30,11 +31,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3>Diagnóstico de Riesgo en Inclusión y Convivencia</h3>
             <p class="srv-tagline">"Abre la puerta y genera urgencia para la gestión que el colegio necesita."</p>
           </div>
-          <div class="srv-precios">
-            <div class="precio-row"><span>Emergente</span><strong>$890.000</strong></div>
-            <div class="precio-row"><span>Establecido</span><strong>$1.290.000</strong></div>
-            <div class="precio-row precio-premium"><span>Premium</span><strong>$1.890.000</strong></div>
-          </div>
+          <div class="srv-precio-unico"><strong>$1.590.000</strong></div>
         </div>
         <div class="srv-body">
           <div class="srv-col">
@@ -59,11 +56,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3>Sistema DEC (Desregulación Emocional y Conducta): Manejo de Crisis y Desregulación</h3>
             <p class="srv-tagline">"La mayoría de los conflictos vienen de pequeñas situaciones mal registradas."</p>
           </div>
-          <div class="srv-precios">
-            <div class="precio-row"><span>Emergente</span><strong>$2.100.000</strong></div>
-            <div class="precio-row"><span>Establecido</span><strong>$3.200.000</strong></div>
-            <div class="precio-row precio-premium"><span>Premium</span><strong>$4.800.000</strong></div>
-          </div>
+          <div class="srv-precio-unico"><strong>$4.100.000</strong></div>
         </div>
         <div class="srv-body">
           <div class="srv-col">
@@ -88,11 +81,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3>Blindaje Normativo en Inclusión</h3>
             <p class="srv-tagline">"No son las crisis extremas las que generan problemas. Es el protocolo cotidiano mal aplicado."</p>
           </div>
-          <div class="srv-precios">
-            <div class="precio-row"><span>Emergente</span><strong>$1.500.000</strong></div>
-            <div class="precio-row"><span>Establecido</span><strong>$2.400.000</strong></div>
-            <div class="precio-row precio-premium"><span>Premium</span><strong>$3.600.000</strong></div>
-          </div>
+          <div class="srv-precio-unico"><strong>$3.100.000</strong></div>
         </div>
         <div class="srv-body">
           <div class="srv-col">
@@ -117,11 +106,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3>PAEC (Plan de Acción Estratégica y Convivencia): Plan Estratégico de Inclusión y Convivencia</h3>
             <p class="srv-tagline">"No más planes que quedan en el papel. Esto ordena toda la gestión del colegio en inclusión."</p>
           </div>
-          <div class="srv-precios">
-            <div class="precio-row"><span>Emergente</span><strong>$2.900.000</strong></div>
-            <div class="precio-row"><span>Establecido</span><strong>$4.200.000</strong></div>
-            <div class="precio-row precio-premium"><span>Premium</span><strong>$6.500.000</strong></div>
-          </div>
+          <div class="srv-precio-unico"><strong>$5.500.000</strong></div>
         </div>
         <div class="srv-body">
           <div class="srv-col">
@@ -146,11 +131,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3>Mediación entre Familia y Escuela</h3>
             <p class="srv-tagline">"Una mala conversación con un apoderado vale diez matrículas perdidas."</p>
           </div>
-          <div class="srv-precios">
-            <div class="precio-row"><span>Emergente</span><strong>$1.200.000</strong></div>
-            <div class="precio-row"><span>Establecido</span><strong>$1.900.000</strong></div>
-            <div class="precio-row precio-premium"><span>Premium</span><strong>$2.900.000</strong></div>
-          </div>
+          <div class="srv-precio-unico"><strong>$2.500.000</strong></div>
         </div>
         <div class="srv-body">
           <div class="srv-col">
@@ -175,11 +156,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3>Acompañamiento Mensual</h3>
             <p class="srv-tagline">"La inclusión escolar no se instala una vez: se mantiene."</p>
           </div>
-          <div class="srv-precios">
-            <div class="precio-row"><span>Emergente</span><strong>$420.000/mes</strong></div>
-            <div class="precio-row"><span>Establecido</span><strong>$680.000/mes</strong></div>
-            <div class="precio-row precio-premium"><span>Premium</span><strong>$980.000/mes</strong></div>
-          </div>
+          <div class="srv-precio-unico"><strong>$850.000/mes</strong></div>
         </div>
         <div class="srv-body">
           <div class="srv-col">
@@ -204,9 +181,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="section-tag fade-up">Packs comerciales</div>
       <h2 class="fade-up">La forma más eficiente de implementar el sistema Dharma</h2>
+      <p class="fade-up" style="color:rgba(248,244,237,0.5);font-size:.9rem;margin-bottom:2rem;">Precios según matrícula del establecimiento · Todos los precios son +IVA</p>
+
+      <div class="matricula-legend fade-up">
+        <div class="matricula-item"><span class="matricula-dot m1"></span>Hasta 300 alumnos</div>
+        <div class="matricula-item"><span class="matricula-dot m2"></span>301 – 800 alumnos</div>
+        <div class="matricula-item"><span class="matricula-dot m3"></span>801+ alumnos</div>
+      </div>
+
       <div class="packs-grid">
 
-        <div class="pack-card fade-up">
+        <div class="pack-card fade-up" id="pack-esencial">
           <div class="pack-name">Pack Esencial</div>
           <div class="pack-desc">Colegios que quieren ordenar su gestión de inclusión antes de que escale.</div>
           <div class="pack-incluye">
@@ -215,14 +200,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div>02 · Sistema DEC</div>
           </div>
           <div class="pack-precios">
-            <div class="pack-precio-row"><span>Emergente</span><strong>$2.600.000</strong></div>
-            <div class="pack-precio-row"><span>Establecido</span><strong>$3.900.000</strong></div>
-            <div class="pack-precio-row"><span>Premium</span><strong>$5.900.000</strong></div>
+            <div class="pack-precio-row"><span>Hasta 300 alumnos</span><strong>$4.500.000</strong></div>
+            <div class="pack-precio-row"><span>301 – 800 alumnos</span><strong>$5.200.000</strong></div>
+            <div class="pack-precio-row pack-precio-top"><span>801+ alumnos</span><strong>$5.900.000</strong></div>
           </div>
-          <a href="/contacto" class="btn-secondary">Solicitar propuesta →</a>
+          <a href="https://wa.me/56957643014?text=Hola%20Dharma%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20el%20Pack%20Esencial%20para%20mi%20colegio." target="_blank" rel="noopener" class="btn-secondary">Solicitar propuesta →</a>
         </div>
 
-        <div class="pack-card pack-featured fade-up">
+        <div class="pack-card pack-featured fade-up" id="pack-seguridad-total">
           <div class="pack-badge">Más contratado</div>
           <div class="pack-name">Pack Seguridad Total</div>
           <div class="pack-desc">Equipos directivos que quieren control total de su gestión inclusiva y normativa.</div>
@@ -233,14 +218,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div>03 · Blindaje Normativo</div>
           </div>
           <div class="pack-precios">
-            <div class="pack-precio-row"><span>Emergente</span><strong>$3.900.000</strong></div>
-            <div class="pack-precio-row"><span>Establecido</span><strong>$5.800.000</strong></div>
-            <div class="pack-precio-row"><span>Premium</span><strong>$8.500.000</strong></div>
+            <div class="pack-precio-row"><span>Hasta 300 alumnos</span><strong>$7.200.000</strong></div>
+            <div class="pack-precio-row"><span>301 – 800 alumnos</span><strong>$8.000.000</strong></div>
+            <div class="pack-precio-row pack-precio-top"><span>801+ alumnos</span><strong>$8.500.000</strong></div>
           </div>
-          <a href="/contacto" class="btn-pack-featured">Solicitar propuesta →</a>
+          <a href="https://wa.me/56957643014?text=Hola%20Dharma%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20el%20Pack%20Seguridad%20Total%20para%20mi%20colegio." target="_blank" rel="noopener" class="btn-pack-featured">Solicitar propuesta →</a>
         </div>
 
-        <div class="pack-card fade-up">
+        <div class="pack-card fade-up" id="pack-transformacion">
           <div class="pack-name">Pack Transformación</div>
           <div class="pack-desc">Sostenedores con visión institucional a largo plazo en inclusión escolar.</div>
           <div class="pack-incluye">
@@ -249,11 +234,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div>3 meses acompañamiento incluido</div>
           </div>
           <div class="pack-precios">
-            <div class="pack-precio-row"><span>Emergente</span><strong>$6.200.000</strong></div>
-            <div class="pack-precio-row"><span>Establecido</span><strong>$9.100.000</strong></div>
-            <div class="pack-precio-row"><span>Premium</span><strong>$13.500.000</strong></div>
+            <div class="pack-precio-row"><span>Hasta 300 alumnos</span><strong>$11.500.000</strong></div>
+            <div class="pack-precio-row"><span>301 – 800 alumnos</span><strong>$12.500.000</strong></div>
+            <div class="pack-precio-row pack-precio-top"><span>801+ alumnos</span><strong>$13.500.000</strong></div>
           </div>
-          <a href="/contacto" class="btn-secondary">Solicitar propuesta →</a>
+          <a href="https://wa.me/56957643014?text=Hola%20Dharma%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20el%20Pack%20Transformaci%C3%B3n%20para%20mi%20colegio." target="_blank" rel="noopener" class="btn-secondary">Solicitar propuesta →</a>
         </div>
 
       </div>
@@ -266,44 +251,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <section class="cta-final">
     <h2 class="fade-up">¿No sabe por dónde empezar?</h2>
-    <p class="fade-up">Haga el diagnóstico gratuito — en 4 preguntas identifica el nivel de riesgo de su colegio en inclusión escolar y convivencia.</p>
+    <p class="fade-up">Haga el diagnóstico gratuito — identifica el nivel de riesgo de su colegio y el pack más adecuado.</p>
     <a href="/diagnostico" class="btn-primary fade-up">Diagnóstico gratuito</a>
   </section>
 
 </BaseLayout>
 
 <style>
-  .seg-section { padding: 3rem 2rem; }
-  .seg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin: 2rem 0 1rem; }
-  .seg-card { padding: 1.5rem; border: 1px solid var(--color-border, rgba(0,0,0,0.12)); border-radius: 4px; }
-  .seg-featured { border-color: #C9A84C; }
-  .seg-num { font-size: 1.1rem; font-weight: 600; margin-bottom: .5rem; }
-  .seg-desc { font-size: .875rem; opacity: .75; line-height: 1.6; }
-  .seg-nota { font-size: .8rem; opacity: .6; text-align: center; margin-top: 1rem; }
-
+  .srv-intro { font-size: .85rem; color: rgba(248,244,237,0.4); margin-bottom: 2rem; font-style: italic; }
   .servicios-section { padding: 4rem 2rem; background: #1a2e1a; color: white; }
   .servicios-section .section-tag { color: #C9A84C; }
   .servicios-section h2 { color: white; }
   .servicio-card { border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 1.5rem; overflow: hidden; }
   .servicio-alt { background: rgba(255,255,255,0.03); }
-  .srv-header { display: grid; grid-template-columns: 60px 1fr auto; gap: 1.5rem; padding: 1.5rem; align-items: start; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .srv-header { display: grid; grid-template-columns: 60px 1fr auto; gap: 1.5rem; padding: 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .srv-num { font-size: 2rem; font-weight: 300; opacity: .3; line-height: 1; }
   .srv-info h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: .4rem; color: white; }
   .srv-tagline { font-size: .8rem; font-style: italic; opacity: .5; line-height: 1.5; }
-  .srv-precios { text-align: right; min-width: 160px; }
-  .precio-row { display: flex; justify-content: space-between; gap: 1rem; font-size: .8rem; padding: .2rem 0; opacity: .7; }
-  .precio-row strong { font-weight: 600; color: rgba(255,255,255,0.9); }
-  .precio-premium strong { color: #C9A84C; }
+  .srv-precio-unico { text-align: right; min-width: 130px; }
+  .srv-precio-unico strong { font-size: 1.3rem; font-weight: 600; color: #C9A84C; font-family: 'Cormorant Garamond', serif; }
   .srv-body { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; padding: 1.5rem; }
   .srv-col-title { font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; opacity: .4; margin-bottom: .75rem; font-weight: 500; }
   .srv-col ul { list-style: none; padding: 0; margin: 0; }
   .srv-col ul li { font-size: .8rem; opacity: .65; line-height: 1.6; padding: .2rem 0 .2rem .75rem; position: relative; }
   .srv-col ul li::before { content: "—"; position: absolute; left: 0; color: #C9A84C; opacity: .6; }
 
+  .matricula-legend { display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+  .matricula-item { display: flex; align-items: center; gap: .5rem; font-size: .8rem; color: rgba(248,244,237,0.6); }
+  .matricula-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .m1 { background: rgba(201,168,76,0.4); }
+  .m2 { background: rgba(201,168,76,0.7); }
+  .m3 { background: #C9A84C; }
+
   .packs-section { padding: 5rem 2rem; background: #0f1f0f; color: white; }
   .packs-section .section-tag { color: #C9A84C; }
   .packs-section h2 { color: white; }
-  .packs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin: 3rem 0 2rem; }
+  .packs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin: 2rem 0; }
   .pack-card { padding: 2rem; border: 0.5px solid rgba(255,255,255,0.15); border-radius: 4px; display: flex; flex-direction: column; gap: 1rem; position: relative; background: rgba(255,255,255,0.03); }
   .pack-featured { border: 2px solid #C9A84C; }
   .pack-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #C9A84C; color: #0f1f0f; font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 12px; border-radius: 20px; white-space: nowrap; }
@@ -312,16 +295,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .pack-incluye { font-size: .8rem; opacity: .7; line-height: 1.8; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; }
   .pack-incluye-title { font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; opacity: .4; margin-bottom: .5rem; }
   .pack-precios { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; }
-  .pack-precio-row { display: flex; justify-content: space-between; font-size: .85rem; padding: .3rem 0; opacity: .8; }
+  .pack-precio-row { display: flex; justify-content: space-between; font-size: .85rem; padding: .3rem 0; opacity: .7; }
   .pack-precio-row strong { font-weight: 600; color: rgba(255,255,255,0.7); }
+  .pack-precio-top { opacity: 1; }
+  .pack-precio-top strong { color: #C9A84C !important; font-size: .95rem; }
   .pack-featured .pack-precio-row strong { color: #C9A84C; }
   .btn-pack-featured { display: block; text-align: center; padding: .75rem; background: #C9A84C; color: #0f1f0f; border-radius: 4px; font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; margin-top: auto; }
-  .packs-nota { text-align: center; font-size: .8rem; opacity: .5; line-height: 1.8; }
+  .packs-nota { text-align: center; font-size: .8rem; opacity: .5; line-height: 1.8; margin-top: 1.5rem; }
 
   @media (max-width: 768px) {
-    .seg-grid, .packs-grid { grid-template-columns: 1fr; }
+    .packs-grid { grid-template-columns: 1fr; }
     .srv-header { grid-template-columns: 40px 1fr; }
-    .srv-precios { grid-column: 1/-1; text-align: left; }
+    .srv-precio-unico { grid-column: 1/-1; text-align: left; }
     .srv-body { grid-template-columns: 1fr; }
   }
 </style>
